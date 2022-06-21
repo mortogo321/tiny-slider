@@ -901,13 +901,13 @@ export var tns = function(options) {
 
       // container styles
       if (carousel) {
-        str = horizontal && !autoWidth ? 'width:' + getContainerWidth(options.fixedWidth, options.gutter, options.items) + ';' : '';
+        str = horizontal && !autoWidth ? 'width:' + getContainerWidth(options.fixedWidth, options.gutter, options.items || '') + ';' : '';
         if (TRANSITIONDURATION) { str += getTransitionDurationStyle(speed); }
         addCSSRule(sheet, '#' + slideId, str, getCssRulesLength(sheet));
       }
 
       // slide styles
-      str = horizontal && !autoWidth ? getSlideWidthStyle(options.fixedWidth, options.gutter, options.items) : '';
+      str = horizontal && !autoWidth ? getSlideWidthStyle(options.fixedWidth, options.gutter, options.items || '') : '';
       if (options.gutter) { str += getSlideGutterStyle(options.gutter); }
       // set gallery items transition-duration
       if (!carousel) {
