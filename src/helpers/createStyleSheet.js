@@ -7,10 +7,10 @@ export function createStyleSheet (media, nonce) {
   // Add a media (and/or media query) here if you'd like!
   // style.setAttribute("media", "screen")
   // style.setAttribute("media", "only screen and (max-width : 1024px)")
-  if (media) { style.setAttribute("media", media); }
+  if (media && style) { style.setAttribute("media", media); }
 
   // Add nonce attribute for Content Security Policy
-  if (nonce) { style.setAttribute("nonce", nonce); }
+  if (nonce && style) { style.setAttribute("nonce", nonce); }
 
   // WebKit hack :(
   // style.appendChild(document.createTextNode(""));

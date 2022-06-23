@@ -6,7 +6,7 @@ export function setAttrs(els, attrs) {
 
   for (var i = els.length; i--;) {
     for(var key in attrs) {
-      els[i].setAttribute(key, attrs[key]);
+      els[i] && els[i].setAttribute(key, attrs[key]);
     }
   }
 }
