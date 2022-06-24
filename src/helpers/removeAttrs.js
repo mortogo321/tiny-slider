@@ -7,7 +7,7 @@ export function removeAttrs(els, attrs) {
   var attrLength = attrs.length;
   for (var i = els.length; i--;) {
     for (var j = attrLength; j--;) {
-      els[i].removeAttribute(attrs[j]);
+      els[i] && els[i].removeAttribute(attrs[j]);
     }
   }
 }
